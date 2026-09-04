@@ -1,0 +1,58 @@
+{
+  "site": {
+    "title": "스마트시티코리아(주)",
+    "description": "도시의 거리와 공간을 스마트하게 만드는 스마트시티 인프라 전문 기업, 스마트시티코리아(주)입니다."
+  },
+  "nav": {
+    "items": [
+      { "label": "회사소개", "anchor": "#about" },
+      { "label": "사업분야", "anchor": "#business" },
+      { "label": "문의", "anchor": "#footer" }
+    ]
+  },
+  "hero": {
+    "backgroundImage": "/images/hero-main.png",
+    "logoImage": "/images/sck-logo-color.png",
+    "slogan": "스마트한 도시 그 시작점에서"
+  },
+  "about": {
+    "body": "스마트시티 코리아는 도시의 거리와 공간을 스마트하게 만드는 스마트시티 인프라 전문 기업입니다. 축적된 기술과 디자인 노하우로 '기술과 디자인의 조화', '사람과 공간의 연결', '도시의 미래'를 실현하며, 도시의 이미지와 시민의 삶의 질을 높이는 데 최선을 다하고 있습니다.",
+    "values": [
+      { "icon": "", "letter": "S", "keyword": "Smart", "description": "기술과 디자인의 조화" },
+      { "icon": "", "letter": "C", "keyword": "Connect", "description": "사람과 공간의 연결" },
+      { "icon": "", "letter": "K", "keyword": "Key", "description": "도시의 미래를 여는 열쇠" }
+    ]
+  },
+  "business": {
+    "items": [
+      {
+        "id": "smart-pole",
+        "name": "스마트폴",
+        "slogan": "도시의 밤을 밝히고 하루를 기록하다",
+        "image": "/images/smart-pole-temp.png"
+      },
+      {
+        "id": "smart-bus-stop",
+        "name": "스마트버스정류장",
+        "slogan": "기다리는 시간을 머물고 싶은 시간으로",
+        "image": "/images/smart-bus-stop-temp.jpg"
+      },
+      {
+        "id": "integrated-platform",
+        "name": "통합운영플랫폼",
+        "slogan": "흩어진 도시를 하나로 모으다",
+        "image": "/images/placeholder-integrated-platform.svg"
+      }
+    ]
+  },
+  "cases": {
+    "items": []
+  },
+  "footer": {
+    "companyName": "스마트시티코리아(주)",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "businessRegistrationNumber": ""
+  }
+}

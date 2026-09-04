@@ -1,0 +1,41 @@
+.about {
+  scroll-margin-top: var(--header-height);
+  padding: 96px 20px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-gray-700);
+}
+
+.cards {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,16 @@
+.logoImage {
+  height: auto;
+  max-width: 60vw;
+  filter: brightness(0) invert(1);
+}
+
+.companyName {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.slogan {
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  font-weight: 500;
+}

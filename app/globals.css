@@ -1,0 +1,58 @@
+:root {
+  --color-primary: #ED1C26;
+  --color-primary-dark: #C4141D;
+  --color-primary-tint: #FDEAEB;
+  --color-secondary: #F06A22;
+  --color-secondary-dark: #CC5314;
+  --color-secondary-tint: #FEF0E7;
+  --color-ink: #1A0F0F;
+  --color-gray-700: #4A4A4A;
+  --color-gray-500: #6B6B6B;
+  --color-gray-300: #D9D9D9;
+  --color-gray-100: #F5F5F5;
+
+  --breakpoint-mobile: 768px;
+  --header-height: 64px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--color-ink);
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

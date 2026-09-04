@@ -1,0 +1,90 @@
+========================================
+스마트시티코리아 홈페이지 - 서버 구축 진행 상황
+========================================
+
+[전체 목표]
+Next.js로 만든 홈페이지(out 폴더)를 리눅스 서버(WSL2 + nginx)에서
+운영하고, 외부(인터넷)에서 접속 가능하게 만들기
+
+----------------------------------------
+완료한 것
+----------------------------------------
+
+1. [완료] WSL2 설치
+   - BIOS에서 가상화(Virtualization) 켜기
+   - PowerShell(관리자 권한)에서 wsl --install 실행
+   - Ubuntu 사용자 이름 / 비밀번호 설정
+
+2. [완료] nginx 설치
+   - Ubuntu 터미널에서:
+     sudo apt update
+     sudo apt install nginx -y
+   - 실행: sudo service nginx start
+   - 확인: 브라우저에서 http://localhost 접속 -> "Welcome to nginx!" 확인됨
+
+3. [진행 중] 우리 홈페이지 파일 서빙 설정
+   - out 폴더를 리눅스 폴더로 복사:
+     sudo mkdir -p /var/www/sck-homepage
+     sudo cp -r /mnt/c/Users/rlatj/Desktop/sck_homepage/out/* /var/www/sck-homepage/
+   - 복사 확인: ls -la /var/www/sck-homepage
+   - nginx 설정 파일 작성 (아직 완료 전):
+     sudo nano /etc/nginx/sites-available/sck-homepage
+     (nano 사용이 어려우면 sudo tee 명령어로 대체 가능)
+
+----------------------------------------
+남은 것 (다음에 이어서 할 일)
+----------------------------------------
+
+4. nginx 설정 파일 완성하기
+   - 아래 내용을 /etc/nginx/sites-available/sck-homepage 에 저장
+
+   server {
+       listen 80;
+       server_name localhost;
+
+       root /var/www/sck-homepage;
+       index index.html;
+
+       location / {
+           try_files $uri $uri.html $uri/ =404;
+       }
+
+       error_page 404 /404.html;
+       location = /404.html {
+           internal;
+       }
+   }
+
+5. 설정 적용하기
+   sudo ln -s /etc/nginx/sites-available/sck-homepage /etc/nginx/sites-enabled/
+   sudo rm /etc/nginx/sites-enabled/default
+   sudo nginx -t          (문법 검사, "syntax is ok" 나와야 함)
+   sudo service nginx restart
+
+6. 확인하기
+   - 브라우저에서 http://localhost 다시 접속
+   - nginx 기본 화면이 아니라 "우리 홈페이지"가 떠야 성공
+
+7. [결정됨] 외부에서 접속 가능하게 만들기 -> Cloudflare Tunnel 사용하기로 결정
+   - 회사 도메인이 Cloudflare에 등록되어 있는지 아직 확인 안 됨 (팀장님께 확인 필요)
+   - 그래서 일단 임시 주소(trycloudflare.com)로 먼저 연결 테스트부터 진행
+   - 도메인 확인되면 정식 도메인으로 교체 예정
+   - cloudflared 설치
+   - Quick Tunnel 실행 (cloudflared tunnel --url http://localhost:80)
+   ※ 포트포워딩 방식은 나중에 별도 학습용으로 진행 예정
+
+8. 도메인 연결 (회사 도메인이 있다면)
+
+9. 외부 기기(휴대폰, 와이파이 끄고 데이터로)에서 실제 접속 테스트
+
+----------------------------------------
+알아두면 좋은 것 (자주 헷갈렸던 부분 정리)
+----------------------------------------
+
+- out 폴더 = Next.js가 빌드해서 만든 완성된 정적 웹사이트 파일
+- WSL2 = Windows 안에 있는 진짜 리눅스 환경 (이게 곧 "서버")
+- nginx = 웹사이트 파일을 실제로 보여주는 프로그램 (웹서버)
+- sudo = "관리자 권한으로 실행" (Windows의 관리자 권한 실행과 같은 개념)
+- nano = 터미널에서 쓰는 메모장 같은 편집기
+- 서버는 "설치하면 끝"이 아니라, 계속 켜두고 관리(업데이트, 재시작, 콘텐츠
+  갱신)해야 하는 것. 초기 구축은 시작일 뿐이고 유지보수가 진짜 본체.

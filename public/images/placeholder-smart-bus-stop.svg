@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="스마트버스정류장 이미지 준비 중">
+  <defs>
+    <linearGradient id="stop-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F06A22" />
+      <stop offset="100%" stop-color="#1A0F0F" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#stop-bg)" />
+  <g fill="#ffffff" opacity="0.14">
+    <rect x="480" y="330" width="640" height="16" />
+    <rect x="500" y="346" width="20" height="330" />
+    <rect x="1080" y="346" width="20" height="330" />
+    <rect x="540" y="500" width="520" height="220" rx="6" opacity="0.5" />
+  </g>
+  <text x="800" y="480" text-anchor="middle" font-family="sans-serif" font-size="34" fill="#ffffff" opacity="0.85">
+    스마트버스정류장 이미지 준비 중
+  </text>
+</svg>

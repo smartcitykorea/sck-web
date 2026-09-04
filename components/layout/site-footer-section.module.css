@@ -1,0 +1,41 @@
+.footer {
+  scroll-margin-top: var(--header-height);
+  background: var(--color-gray-700);
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.companyName {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.infoList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  font-size: 0.85rem;
+}
+
+.infoRow {
+  display: flex;
+  gap: 6px;
+  color: var(--color-gray-300);
+}
+
+.infoRow dt {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .infoList {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="통합운영플랫폼 연동 다이어그램">
+  <defs>
+    <linearGradient id="diagram-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EEF2F6" />
+      <stop offset="100%" stop-color="#D9E2EA" />
+    </linearGradient>
+    <filter id="soft-shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0B1420" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#diagram-bg)" />
+
+  <!-- connector lines -->
+  <g stroke="#4A4A4A" stroke-opacity="0.35" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round" fill="none">
+    <path d="M770,410 C600,330 460,260 340,205" />
+    <path d="M830,380 C830,290 800,210 780,150" />
+    <path d="M900,410 C1040,330 1150,270 1230,235" />
+    <path d="M900,470 C1080,470 1220,480 1310,500" />
+    <path d="M860,540 C1000,610 1080,660 1160,705" />
+    <path d="M770,530 C620,610 520,660 430,715" />
+  </g>
+
+  <!-- center hub badge -->
+  <rect x="730" y="380" width="150" height="150" rx="32" fill="#ffffff" filter="url(#soft-shadow)" />
+  <g transform="translate(805,455)">
+    <path d="M-46,-14 L-14,-40 L18,-14 L-14,12 Z" fill="#ED1C26" />
+    <path d="M14,-14 L46,-40 L46,-8 L14,18 Z" fill="#F06A22" />
+    <path d="M-14,12 L18,-14 L46,8 L14,34 L-14,44 Z" fill="#C4141D" opacity="0.9" />
+  </g>
+
+  <!-- label pills -->
+  <g font-family="sans-serif" font-weight="700" font-size="24" fill="#ffffff">
+    <g filter="url(#soft-shadow)">
+      <rect x="190" y="178" width="180" height="54" rx="27" fill="#ED1C26" />
+    </g>
+    <text x="280" y="213" text-anchor="middle">스마트폴 제어</text>
+
+    <g filter="url(#soft-shadow)">
+      <rect x="680" y="94" width="210" height="54" rx="27" fill="#F06A22" />
+    </g>
+    <text x="785" y="129" text-anchor="middle">정류장 모니터링</text>
+
+    <g filter="url(#soft-shadow)">
+      <rect x="1150" y="200" width="200" height="54" rx="27" fill="#ED1C26" />
+    </g>
+    <text x="1250" y="235" text-anchor="middle">실시간 통합관제</text>
+
+    <g filter="url(#soft-shadow)">
+      <rect x="1310" y="472" width="170" height="54" rx="27" fill="#C4141D" />
+    </g>
+    <text x="1395" y="507" text-anchor="middle">데이터 분석</text>
+
+    <g filter="url(#soft-shadow)">
+      <rect x="1080" y="678" width="200" height="54" rx="27" fill="#F06A22" />
+    </g>
+    <text x="1180" y="713" text-anchor="middle">원격 점검·알림</text>
+
+    <g filter="url(#soft-shadow)">
+      <rect x="290" y="688" width="210" height="54" rx="27" fill="#ED1C26" />
+    </g>
+    <text x="395" y="723" text-anchor="middle">CCTV·센서 연동</text>
+  </g>
+</svg>
