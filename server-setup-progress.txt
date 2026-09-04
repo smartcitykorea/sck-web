@@ -167,6 +167,15 @@ server {
 - origin = 원격 저장소 주소의 별칭. 매번 긴 주소 안 치려고 붙이는 이름
 - VS Code 소스 제어 패널(Ctrl+Shift+G)로 버튼 클릭만으로도 작업 가능.
   출력 창(Ctrl+Shift+U)에서 Git 을 고르면 실제 실행된 명령이 보여서 공부에도 좋음
+- 윈도우에는 ssh 가 두 개 깔려 있음. 서로의 ssh-agent 를 모름
+    C:/Windows/System32/OpenSSH/ssh.exe   <- 윈도우 기본. ssh-agent 서비스를 씀
+    C:/Program Files/Git/usr/bin/ssh.exe  <- Git 이 들고 온 것
+  터미널 ssh 는 되는데 git push 만 암호문구를 물어보면 이게 원인.
+  git 에게 윈도우 ssh 를 쓰라고 지정하면 해결됨:
+    git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
+- VS Code 의 push 버튼이 무한 로딩이면 십중팔구 위 문제임.
+  GUI 는 암호문구 입력창을 띄울 자리가 없어서 그냥 멈춰버림.
+  터미널에서 git push 를 직접 해보면 진짜 원인이 보임 (이게 기본 대처법)
 
 [권한 - 여기서 제일 많이 막혔음]
 - 폴더는 실행 권한(x)이 있어야 "안으로 들어갈 수" 있음.
