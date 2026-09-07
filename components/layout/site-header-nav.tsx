@@ -22,12 +22,12 @@ export default function SiteHeaderNav() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href="/" className={styles.brand}>
-          {content.hero.logoImage.length > 0 ? (
+          {content.nav.logoImage.length > 0 ? (
             <Image
-              src={withBasePath(content.hero.logoImage)}
+              src={withBasePath(content.nav.logoImage)}
               alt={content.footer.companyName}
-              width={69}
-              height={40}
+              width={2956}
+              height={486}
               className={styles.brandLogo}
               priority
             />

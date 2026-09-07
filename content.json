@@ -4,6 +4,7 @@
     "description": "도시의 거리와 공간을 스마트하게 만드는 스마트시티 인프라 전문 기업, 스마트시티코리아(주)입니다."
   },
   "nav": {
+    "logoImage": "/images/use/sck-logo-vertical-kr.webp",
     "items": [
       { "label": "회사소개", "anchor": "#about" },
       { "label": "사업분야", "anchor": "#business" },

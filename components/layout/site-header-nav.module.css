@@ -211,4 +211,8 @@
   .menuMobile {
     display: flex;
   }
+
+  .brandLogo {
+    height: 28px;
+  }
 }
