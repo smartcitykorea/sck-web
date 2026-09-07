@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import content from "@/content.json";
+import { withBasePath } from "@/lib/asset-path";
 import styles from "./site-header-nav.module.css";
 
 const BUSINESS_NAV_ANCHOR = "#business";
@@ -23,7 +24,7 @@ export default function SiteHeaderNav() {
         <Link href="/" className={styles.brand}>
           {content.hero.logoImage.length > 0 ? (
             <Image
-              src={content.hero.logoImage}
+              src={withBasePath(content.hero.logoImage)}
               alt={content.footer.companyName}
               width={69}
               height={40}

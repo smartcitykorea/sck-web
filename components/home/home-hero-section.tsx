@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import content from "@/content.json";
 import FullscreenImageBanner from "@/components/common/fullscreen-image-banner";
+import { withBasePath } from "@/lib/asset-path";
 import styles from "./home-hero-section.module.css";
 
 export default function HomeHeroSection() {
@@ -17,7 +18,7 @@ export default function HomeHeroSection() {
       <FullscreenImageBanner image={hero.backgroundImage} alt="" priority>
         {logoSrc.length > 0 ? (
           <Image
-            src={logoSrc}
+            src={withBasePath(logoSrc)}
             alt={footer.companyName}
             width={340}
             height={197}

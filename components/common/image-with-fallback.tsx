@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { withBasePath } from "@/lib/asset-path";
 
 export const IMAGE_FALLBACK_SRC = "/images/placeholder-default.svg";
 
@@ -37,7 +38,7 @@ export default function ImageWithFallback({
   return (
     <div className={className} style={wrapperStyle}>
       <Image
-        src={imgSrc}
+        src={withBasePath(imgSrc)}
         alt={alt}
         fill
         priority={priority}
