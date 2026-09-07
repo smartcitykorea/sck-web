@@ -2,10 +2,11 @@ import type { ReactNode } from "react";
 import ImageWithFallback from "./image-with-fallback";
 import styles from "./fullscreen-image-banner.module.css";
 
-type ContentPosition = "center" | "bottom-left" | "bottom-right";
+type ContentPosition = "center" | "top-left" | "bottom-left" | "bottom-right";
 
 const CONTENT_POSITION_CLASS: Record<ContentPosition, string> = {
   center: styles.contentCenter,
+  "top-left": styles.contentTopLeft,
   "bottom-left": styles.contentBottomLeft,
   "bottom-right": styles.contentBottomRight,
 };

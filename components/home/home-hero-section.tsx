@@ -20,9 +20,10 @@ export default function HomeHeroSection() {
           <Image
             src={withBasePath(logoSrc)}
             alt={footer.companyName}
-            width={340}
-            height={197}
+            width={312}
+            height={198}
             className={styles.logoImage}
+            draggable={false}
             onError={() => setLogoSrc("")}
           />
         ) : (

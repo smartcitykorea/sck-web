@@ -23,7 +23,7 @@ export default function BusinessHeroBlock({
       id={id}
       image={image}
       alt={name}
-      contentPosition={align === "left" ? "bottom-left" : "bottom-right"}
+      contentPosition="top-left"
       className={withTopDivider ? styles.divider : undefined}
     >
       <p className={styles.name}>{name}</p>
