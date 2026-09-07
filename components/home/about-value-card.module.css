@@ -35,4 +35,5 @@
 .description {
   font-size: 0.9rem;
   color: var(--color-gray-500);
+  white-space: pre-line;
 }

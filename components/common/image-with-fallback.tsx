@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { withBasePath } from "@/lib/asset-path";
 
-export const IMAGE_FALLBACK_SRC = "/images/placeholder-default.svg";
+export const IMAGE_FALLBACK_SRC = "/images/temp/placeholder-default.svg";
 
 interface ImageWithFallbackProps {
   src?: string;

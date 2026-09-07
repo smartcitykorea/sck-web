@@ -13,11 +13,13 @@
 .overlay {
   position: absolute;
   inset: 0;
+  /* 임시로 끔 — 다시 켜려면 아래 background 주석 해제
   background: linear-gradient(
     to bottom,
     rgba(26, 15, 15, 0.45),
     rgba(26, 15, 15, 0.55)
   );
+  */
 }
 
 .content {
