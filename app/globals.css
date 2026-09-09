@@ -17,9 +17,9 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
 }
 
+/* 스냅은 데스크톱에서만 켠다. 모바일은 바탕 규칙에 scroll-snap-type이 없어 자동으로 꺼진다. */
 @media (min-width: 769px) {
   html {
     scroll-snap-type: y mandatory;
