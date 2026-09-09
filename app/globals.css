@@ -17,6 +17,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+@media (min-width: 769px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
 }
 
 * {
@@ -25,10 +32,12 @@ html {
   padding: 0;
 }
 
+/* overflow-x: hidden 은 스크롤 컨테이너를 새로 만들어 scroll-snap 을 무력화한다.
+   가로 넘침만 잘라내고 스크롤 컨테이너는 만들지 않는 clip 을 쓴다. */
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {

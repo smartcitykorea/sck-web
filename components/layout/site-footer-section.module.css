@@ -16,6 +16,18 @@
   margin-bottom: 16px;
 }
 
+.addressList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.addressList dt {
+  min-width: 4em;
+}
+
 .infoList {
   display: flex;
   flex-wrap: wrap;
@@ -38,4 +50,23 @@
     flex-direction: column;
     gap: 8px;
   }
+}
+
+/* 푸터는 한 화면보다 짧으므로 아래쪽 끝을 기준으로 정지시킨다. */
+@media (min-width: 769px) {
+  .footer {
+    scroll-snap-align: end;
+  }
+}
+
+.copyright {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.78rem;
+  color: var(--color-gray-300);
+}
+
+.infoRow dd {
+  word-break: keep-all;
 }

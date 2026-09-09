@@ -28,6 +28,23 @@
   gap: 16px;
 }
 
+/* mandatory 스냅에서 정지 지점이 없으면 섹션 전체가 건너뛰어지므로,
+   데스크톱에서는 회사소개도 한 화면 높이의 정지 지점으로 만든다. */
+@media (min-width: 769px) {
+  .about {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .inner {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .inner {
     gap: 32px;

@@ -1,7 +1,11 @@
 .banner {
   position: relative;
+  /* dvh 미지원 브라우저는 위 100vh로 동작 */
   min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .background {
@@ -27,7 +31,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 5px;
   color: #ffffff;
 }
 
@@ -36,10 +40,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 24px 30vh;
+  padding: 0 24px 25vh;
 }
 
-/* 고정 헤더에 가리지 않도록 --header-height 만큼 띄운다. */
 .contentTopLeft {
   left: 5%;
   right: 5%;

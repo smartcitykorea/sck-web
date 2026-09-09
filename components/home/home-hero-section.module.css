@@ -11,19 +11,10 @@
   letter-spacing: -0.02em;
 }
 
-/* 로고는 배너 중앙에 두고 슬로건만 하단에 고정한다.
-   absolute로 빼면 flex 중앙정렬 계산에서 빠져 로고가 정확히 가운데로 온다. */
+/* 로고와 슬로건을 한 덩어리로 묶어 배너 중앙에 함께 배치한다.
+   배너의 .content가 flex column이라 흐름에 두기만 하면 세로로 쌓인다.
+   둘 사이 간격은 fullscreen-image-banner.module.css의 .content gap이 결정한다. */
 .slogan {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 30vh;
-  font-size: clamp(3rem, 8vw, 3rem);
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .slogan {
-    bottom: 64px;
-  }
+  font-size: clamp(1rem, 3.5vw, 1rem);
+  font-weight: 100;
 }
